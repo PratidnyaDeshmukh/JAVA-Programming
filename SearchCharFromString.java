@@ -3,60 +3,25 @@ import java.util.*;
 import java.lang.*;
 
 public class SearchCharFromString {
-    public static int serachTarget(String str, char target) {
-        String s = str.toLowerCase();
-        char s1[] = s.toCharArray();
-
-        int len = s1.length;
-        for (int i = 0; i < len; i++) {
-            if (s1[i] == target) {
-                return target;
+    public static void srchchar(String str, char s) {
+        String str1 = str.toLowerCase();
+        if (str1.length() == 0) {
+            System.out.println("Empty");
+        }
+        for (int i = 0; i < str1.length(); i++) {
+            char ele = str1.charAt(i);
+            if (ele == s) {
+                System.out.println("found");
             }
         }
-        return -1;
-
+        return;
     }
 
     public static void main(String args[]) {
-        String str = "Pratidnya";
-        char target = "r";
-        System.out.println(serachTarget(str, target));
+        SearchCharFromString so = new SearchCharFromString();
+        String str = "Hello";
+        char s = 'h';
+        so.srchchar(str, s);
+
     }
 }
-
-// public static int targetString(String str, String target) {
-// if (str.length() == 0) {
-// return -1;
-// }
-// String l = str.toLowerCase();
-// int len = l.length();
-// for (int i = 0; i < len; i++) {
-// if (l.charAt(i) == target) {
-// System.out.println("Found");
-// }
-// }
-// return -1;
-// }
-// public static void main(String[] args) {
-// Scanner scan = new Scanner(System.in);
-// System.out.println("-----------------------");
-// System.out.println("Enter String:");
-// String str = scan.nextLine();
-
-// System.out.println("-----------------------");
-// System.out.println("Enter Target Element");
-// char target = scan.next();
-
-// // System.out.println(targetString(str, target));
-
-// int strlen = str.length();
-// if (strlen == 0) {
-// System.out.println(("Not Found"));
-// }
-// for (int i = 0; i < strlen; i++) {
-// if (str.charAt(i) == target) {
-// System.out.println((" Found"));
-// }
-// }
-// System.out.println(("Not Found"));
-// }
